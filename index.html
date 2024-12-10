@@ -23,16 +23,17 @@
             toolbox: `
                 <xml xmlns="https://developers.google.com/blockly/xml">
                     <block type="controls_if"></block>
+                    <block type="logic_boolean"></block>
+                    <block type="math_number"></block>
+                    <block type="text"></block>
                     <block type="controls_repeat_ext"></block>
                     <block type="controls_whileUntil"></block>
                     <block type="controls_for"></block>
                     <block type="controls_flow_statements"></block>
-                    <block type="logic_boolean"></block>
                     <block type="logic_compare"></block>
                     <block type="logic_operation"></block>
                     <block type="logic_negate"></block>
                     <block type="logic_ternary"></block>
-                    <block type="math_number"></block>
                     <block type="math_arithmetic"></block>
                     <block type="math_single"></block>
                     <block type="math_trig"></block>
@@ -45,7 +46,6 @@
                     <block type="math_constrain"></block>
                     <block type="math_random_int"></block>
                     <block type="math_random_float"></block>
-                    <block type="text"></block>
                     <block type="text_join"></block>
                     <block type="text_append"></block>
                     <block type="text_length"></block>
@@ -79,10 +79,10 @@
                     <block type="procedures_defreturn"></block>
                     <block type="procedures_callnoreturn"></block>
                     <block type="procedures_callreturn"></block>
-                    <block type="debugger"></block>
                 </xml>
             `
         });
+        
         function generateCode() {
             var code = Blockly.JavaScript.workspaceToCode(workspace);
             document.getElementById('output').textContent = code;
